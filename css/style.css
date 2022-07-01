@@ -1,0 +1,37 @@
+@font-face {
+   font-family: "Iran Nastaligh";
+   src: url("../assets/fonts/IranNastaliq/IranNastaliq.ttf") format("truetype");
+ }
+ /** Reset Code */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   border: none;
+   outline: none;
+ }
+ 
+ /* Root Variables */
+ :root {
+   --primary-color: #16a34a;
+   --secondary-color: #bbf7d0;
+   --main-white: #fff;
+   --black-project: #1c1917;
+   --main-black: #000;
+   --main-red: #dc2626;
+   --main-yellow: #fbbf24;
+   --main-gray: #6b7280;
+   --main-transition: all 0.3s ease-out;
+ }
+ 
+ /* Html And Body */
+ 
+ html {
+   font-size: 62.5%;
+ }
+ 
+ body {
+   font-family: "Iran Nastaligh";
+ }
+ 

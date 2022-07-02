@@ -1,7 +1,7 @@
 // Search Input
 const labelSearch = document.querySelector(".label__search-input");
 const searchInput = document.querySelector(".search-input");
-const searchContainer = document.querySelector(".search__container");
+const filteredCount = document.querySelector(".filteredCount");
 
 function addInputToDOM() {
   searchInput.classList.toggle("active__search-input");
@@ -140,3 +140,25 @@ function removeLocalTodos(todo) {
 document.addEventListener("DOMContentLoaded", () => {
   getTodosInStorage();
 });
+
+// Serach Input
+function searchTodos(e) {
+  filteredCount.innerHTML = "";
+  const valueInput = e.target.value;
+  const savedTodos = localStorage.getItem("todos")
+    ? JSON.parse(localStorage.getItem("todos"))
+    : [];
+  const filteredTitles = savedTodos.filter((todoTitle) => {
+    return todoTitle.todo.toLowerCase().includes(valueInput.toLowerCase());
+  });
+  filteredTitles.forEach((title) => {
+    const li = document.createElement("li");
+    li.innerHTML = title.todo;
+    filteredCount.appendChild(li);
+  });
+  if (valueInput == "") {
+    filteredCount.innerHTML = "";
+  }
+}
+
+searchInput.addEventListener("input", searchTodos);

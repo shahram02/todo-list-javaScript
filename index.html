@@ -27,12 +27,15 @@
           <label for="search-input" class="label__search-input">
             <i class="fa-solid fa-magnifying-glass"></i>
           </label>
-          <input
-            id="search-input"
-            type="text"
-            class="search-input"
-            placeholder="سرچ کردن مقادیر ذخیره شده"
-          />
+          <div class="container-input">
+            <input
+              id="search-input"
+              type="text"
+              class="search-input"
+              placeholder="سرچ کردن مقادیر ذخیره شده"
+            />
+            <div class="filteredCount"></div>
+          </div>
         </div>
         <div class="logo">
           <img src="./assets/images/done-dribbble.webp" alt="logo" />
@@ -49,10 +52,10 @@
         <form action="">
           <div class="input-container">
             <input type="text" class="todo-input" id="todo-input" />
-            <button for="todo-input" class="todo-button" >
+            <button for="todo-input" class="todo-button">
               <i class="fa-solid fa-circle-plus"></i>
-              </button>
-            </div>
+            </button>
+          </div>
           <div class="input-container selected">
             <select name="todos" class="filter-todos">
               <option value="all">همه</option>

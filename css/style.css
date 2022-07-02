@@ -124,6 +124,7 @@ body {
   align-items: center;
   color: var(--primary-color);
   position: relative;
+  width: 100%;
 }
 
 .filteredCount{

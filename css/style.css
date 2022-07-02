@@ -174,13 +174,14 @@ body {
 .todo .form-container form .todo-button {
   color: var(--primary-color);
   transition: var(--main-transition);
-  min-width: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   border-radius: 4px;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
+  background: none;
 }
 .todo .form-container form .todo-button:hover {
   background-color: var(--primary-color);
@@ -193,13 +194,15 @@ body {
   justify-content: center;
 }
 
-.todos-container .todo{
+.todos-container .todo {
   display: flex;
   width: 100%;
   flex-direction: row;
   background-color: var(--secondary-color);
-  margin: .5rem 0;
-  padding: 0 .5rem;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .todos-container .todo li {
@@ -209,18 +212,30 @@ body {
   font-weight: bold;
 }
 
-.todos-container .todo span{
+.todos-container .todo .date__todo {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-left: 0.5rem;
+}
+
+.todos-container .todo span {
   display: block;
   font-size: 2rem;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-.todos-container .todo span .fa-trash-alt{
+.todos-container .todo span .fa-trash-alt {
   color: var(--main-red);
 }
 
-.todos-container .todo span .fa-square-check{
+.todos-container .todo span .fa-square-check {
+  color: var(--primary-color);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: .5;
   color: var(--primary-color);
 }
 
@@ -240,5 +255,8 @@ body {
   }
   .todo .form-container form .todo-input {
     width: 400px;
+  }
+  .todos-container .todo li {
+    font-size: 3rem;
   }
 }

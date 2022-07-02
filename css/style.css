@@ -235,7 +235,31 @@ body {
 
 .completed {
   text-decoration: line-through;
-  opacity: .5;
+  opacity: 0.5;
+  color: var(--primary-color);
+}
+
+.input-container .filter-todos {
+  appearance: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--primary-color);
+  background-color: var(--bgc-header);
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.selected.input-container {
+  position: relative;
+}
+
+.selected.input-container::after {
+  content: " \25bc";
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
 }
 

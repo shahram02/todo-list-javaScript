@@ -158,6 +158,9 @@ body {
   justify-content: center;
   max-width: 650px;
 }
+ .todo .text-todo{
+  flex: 1;
+ }
 
 .todo .header__todo {
   width: 100%;
@@ -169,6 +172,7 @@ body {
   color: var(--primary-color);
 }
 
+
 .todo .form-container {
   width: 100%;
 }
@@ -176,8 +180,9 @@ body {
 .todo .form-container form {
   display: flex;
   width: 100%;
-  justify-content: space-between;
   height: 3.5rem;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .todo .form-container form .todo-input {
@@ -187,6 +192,7 @@ body {
   border-radius: 5px;
   color: var(--primary-color);
   background-color: var(--bgc-header);
+  width: 100%;
 }
 .todo .form-container form .todo-input:focus {
   border: 2px solid var(--primary-color);
@@ -195,13 +201,14 @@ body {
   color: var(--primary-color);
   transition: var(--main-transition);
   width: 50px;
+  min-width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   border-radius: 4px;
-  margin: 0 0.5rem;
   background: none;
+  height: 100%;
 }
 .todo .form-container form .todo-button:hover {
   background-color: var(--primary-color);
@@ -209,10 +216,17 @@ body {
 }
 
 .todo .form-container .input-container {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 70% ;
+  flex: 1;
 }
+
+.todo .form-container .search-container{
+  width: 25%;
+}
+
 
 .todos-container .todo {
   display: flex;
@@ -259,21 +273,22 @@ body {
   color: var(--primary-color);
 }
 
-.input-container .filter-todos {
+.search-container .filter-todos {
   appearance: none;
-  width: 100%;
   padding: 1rem;
   color: var(--primary-color);
   background-color: var(--bgc-header);
   cursor: pointer;
   padding: 0.5rem 0;
+  width: 100%;
+  height: 100%;
 }
 
-.selected.input-container {
+.selected.search-container {
   position: relative;
 }
 
-.selected.input-container::after {
+.selected.search-container::after {
   content: " \25bc";
   top: 0;
   left: 0;

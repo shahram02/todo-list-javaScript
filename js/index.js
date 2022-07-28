@@ -21,7 +21,7 @@ function addTodo() {
     const todo = document.createElement("div");
     todo.classList.add("todo");
     todo.innerHTML = `
-      <li>
+      <li class="text-todo">
       ${todoInput.value.substring(0, MaxLength)}
       ${todoInput.value.length > MaxLength ? "..." : ""}
       </li>

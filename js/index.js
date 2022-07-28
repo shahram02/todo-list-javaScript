@@ -91,7 +91,7 @@ function filterTodos(e) {
     }
   });
 }
-filterOption.addEventListener("click", filterTodos);
+filterOption.addEventListener("change", filterTodos);
 
 // Storage
 function savedTodos(todo, date) {
